@@ -1,0 +1,38 @@
+*{
+    margin : 0px;
+    padding:0px;
+    background-position: 0px;
+    border: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+.HeroSection{
+    background: url(images/heroSectionBackground.png);
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center;
+}
+.navBar{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 48px;
+    height: 60px;
+    
+}
+.navBar a{
+    text-decoration: none;
+    color:white;
+}
+.navbar__menu_container{
+    display: flex;
+    gap:20px;
+}
+.navBar .user__icon{
+    height:30px;
+    width:30px;
+    border:1px solid white;
+    border-radius:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

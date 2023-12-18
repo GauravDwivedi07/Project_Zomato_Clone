@@ -27,7 +27,7 @@
     display: flex;
     gap:20px;
 }
-.navBar .user__icon{
+.navbar__menu_container .user__icon{
     height:30px;
     width:30px;
     border:1px solid white;
@@ -35,4 +35,125 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
+
+
+.hero__section_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: static;
+    top:7rem;
+    gap:30px;
+}
+.hero__section_logo{
+    height: 5vh;    
+}
+.hero__section_container h1{
+    color:white;
+    font-size: 30px;
+    font-weight: 400;
+    
+}
+.hero__section_container_input_text{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 12px;
+}
+.input_container__location, .input_container__restaurants{
+
+    border: none;
+    outline: none;
+}
+.input_container__location{
+   width:35%;
+   border-right: 2px solid #e0e0e0;      
+}
+
+.input_container__restaurants{
+   width: 65%;   
+}
+/* media queries*/
+@media only screen and (max-width:600px) {
+    .navbar__menu_container .user__icon {
+        display: flex;
+    }
+
+    .link {
+        display: none;
+    }
+    .HeroSection{
+        min-height: 80vh;
+    }
+    .navBar{
+        padding:16px;
+    }
+    .hero__section_container{
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+    }
+    .hero__section_logo{
+        width: 95%;
+        height: 5vh;
+        width: auto;
+    }
+    .hero__section_container h1{
+         text-align: center;
+         font-size:20px;
+         width: 95%;
+        }
+    .hero__section_container_input_text{
+        width: 95%;
+    }    
+}
+.items_section{
+    margin: 3rem auto;
+    width: 80%;
+    
+}
+.items_section_main_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;   
+    flex-wrap: wrap;
+}
+.images__container{
+    border: 2px solid #e0e0e0 ;
+    border-radius: 10px;
+    overflow: hidden;
+   
+    transition: all 0.3s ease;
+}
+.images__container:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.items_section_images{
+    width: 100%;
+    height: 170px;
+    object-fit: cover; 
+    object-position: center;  
+}
+.label__container{
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.label__container h3{
+    font-size: 20px;
+}
+.label__container p{
+    font-size: 12px;
+}
+
+
+

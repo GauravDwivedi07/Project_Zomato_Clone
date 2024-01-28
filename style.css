@@ -1,8 +1,9 @@
 * {
-  margin: 0px;
-  padding: 0px;
-  background-position: 0px;
-  border: 0px;
+  margin: 0;
+  padding: 0;
+  background-position: 0;
+  border: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 .HeroSection {
@@ -43,17 +44,18 @@
   justify-content: center;
   flex-direction: column;
   position: static;
-  top: 7rem;
-  gap: 30px;
+  top: 6rem;
+  gap: 20px;
 }
 .hero__section_logo {
-  height: 5vh;
+  height: 7vh;
 }
 .hero__section_container h1 {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
 }
+
 .hero__section_container_input_text {
   background-color: white;
   display: flex;
@@ -63,7 +65,9 @@
   padding: 10px;
   gap: 10px;
   border-radius: 12px;
+  
 }
+
 .input_container__location,
 .input_container__restaurants {
   border: none;
@@ -77,8 +81,9 @@
 .input_container__restaurants {
   width: 65%;
 }
+
 /* media queries*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   .navbar__menu_container .user__icon {
     display: flex;
   }
@@ -87,19 +92,23 @@
     display: none;
   }
   .HeroSection {
-    min-height: 80vh;
+    min-height: 60vh;
+    width: 100%;
+    margin: auto;
   }
   .navBar {
     padding: 16px;
   }
   .hero__section_container {
+    display: flex;
     flex-direction: column;
     background-color: transparent;
-    width: 100%;
+    width: 80%;
+    margin:auto;
   }
   .hero__section_logo {
     width: 95%;
-    height: 5vh;
+    height: 8vh;
     width: auto;
   }
   .hero__section_container h1 {
@@ -108,9 +117,19 @@
     width: 95%;
   }
   .hero__section_container_input_text {
-    width: 95%;
-  }
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
 }
+.input_container__location,
+.input_container__restaurants {
+            padding: 10px;
+            border-radius: 10px;
+            width: 95%;
+        }
+}
+
+
 .items_section {
   margin: 3rem auto;
   width: 80%;
@@ -167,8 +186,6 @@
 }
 .section_content_container span:nth-child(2) {
   color: #ff7e8b;
-}
-.section_content_container span:nth-child(2):hover {
   cursor: pointer;
 }
 .collection_cards_container {
@@ -224,8 +241,24 @@
   letter-spacing: 0.2px;
 }
 .window {
-  margin: 30px;
+  margin: 0  30px;
 }
+@media only screen and(max-width:530){
+  .collection_container{
+    width: 100%;
+    margin: auto;
+  }
+
+  .collection_cards_container .card{
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    object-fit: fill;
+  }
+}
+
+/*Download Section CSS*/
+
 .app_download_section {
   display: flex;
   flex-direction: row;
@@ -290,6 +323,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .Text_box_and_button_container input,
@@ -305,7 +339,7 @@
 }
 
 .Text_box_and_button_container button {
-  flex: auto;
+  /*flex: auto;*/
   background-color: #ff7e8b;
   border: 1.5px solid #ff7e8b;
   border-radius: 3px;
@@ -328,14 +362,12 @@
 
 .Text_and_logo_container div {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.8rem;
 }
 
 .Text_and_logo_container div img {
   width: 12rem;
-}
-
-@media only screen and (max-width: 1200px) {
 }
 
 .Main_container {
@@ -452,4 +484,44 @@
     align-items: center;
     justify-content: center;
   }
+}
+
+@media only screen and (max-width: 1200px){
+  app_download_section_right,
+  .app_download_section_left{
+      flex: 1;
+  }
+      .app_download_section_all{
+          width: 80%;
+      }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .app_download_section{
+  padding: 2rem;
+ }
+
+ .app_download_section_all {
+      width: 90%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .app_download_section {
+      padding: 3rem 0;
+  }
+
+  .app_download_section_all {
+    width: 80%;
+    flex-direction: column;
+}
+}
+
+@media only screen and (max-width: px){
+ body{
+  width: 100%;
+  
+ }
 }
